@@ -1,0 +1,12 @@
+proto = [];
+src = [11, 22157, 23505, 43174, 49930];
+dst = [6039, 9144, 22157];
+ when src<=11.0  then 2;
+ when src>11.0 and dst<=6039.0 and src<=23505.5  then 0;
+ when src>11.0 and dst<=6039.0 and src>23505.5 and src<=49930.0  then 4;
+ when src>11.0 and dst<=6039.0 and src>23505.5 and src>49930.0  then 3;
+ when src>11.0 and dst>6039.0 and src<=43174.5 and dst<=22157.5 and dst<=9144.0  then 4;
+ when src>11.0 and dst>6039.0 and src<=43174.5 and dst<=22157.5 and dst>9144.0  then 1;
+ when src>11.0 and dst>6039.0 and src<=43174.5 and dst>22157.5 and src<=22157.5  then 1;
+ when src>11.0 and dst>6039.0 and src<=43174.5 and dst>22157.5 and src>22157.5  then 3;
+ when src>11.0 and dst>6039.0 and src>43174.5  then 4;

@@ -1,0 +1,188 @@
+//
+// Copyright (c) BLINDED
+// All rights reserved.
+//
+// This software was developed by Stanford University and the University of Cambridge Computer Laboratory 
+// under National Science Foundation under Grant No. CNS-0855268,
+// the University of Cambridge Computer Laboratory under EPSRC INTERNET Project EP/H040536/1 and
+// by the University of Cambridge Computer Laboratory under DARPA/AFRL contract FA8750-11-C-0249 ("MRC2"), 
+// as part of the DARPA MRC research programme.
+//
+// @NETFPGA_LICENSE_HEADER_START@
+//
+// Licensed to NetFPGA C.I.C. (NetFPGA) under one or more contributor
+// license agreements.  See the NOTICE file distributed with this work for
+// additional information regarding copyright ownership.  NetFPGA licenses this
+// file to you under the NetFPGA Hardware-Software License, Version 1.0 (the
+// "License"); you may not use this file except in compliance with the
+// License.  You may obtain a copy of the License at:
+//
+//   http://www.netfpga-cic.org
+//
+// Unless required by applicable law or agreed to in writing, Work distributed
+// under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
+// CONDITIONS OF ANY KIND, either express or implied.  See the License for the
+// specific language governing permissions and limitations under the License.
+//
+// @NETFPGA_LICENSE_HEADER_END@
+//
+
+
+#note: else must be mapped to zero
+
+#Frame Length
+#155
+table_tcam_add_entry lookup_len 0x0 set_len_code 0b10011010/32 => 0x00000001
+table_tcam_add_entry lookup_len 0x1 set_len_code 0b10011000/31 => 0x00000001
+table_tcam_add_entry lookup_len 0x2 set_len_code 0b10010000/29 => 0x00000001
+table_tcam_add_entry lookup_len 0x3 set_len_code 0b10000000/28 => 0x00000001
+table_tcam_add_entry lookup_len 0x4 set_len_code 0b00000000/25 => 0x00000001
+table_tcam_add_entry lookup_len 0x5 set_len_code 0b10011011/32 => 0x00000001
+#190
+table_tcam_add_entry lookup_len 0x6 set_len_code 0b10111100/31 => 0x00000002
+table_tcam_add_entry lookup_len 0x7 set_len_code 0b10111000/30 => 0x00000002
+table_tcam_add_entry lookup_len 0x8 set_len_code 0b10110000/29 => 0x00000002
+table_tcam_add_entry lookup_len 0x9 set_len_code 0b10100000/28 => 0x00000002
+table_tcam_add_entry lookup_len 0xa set_len_code 0b10000000/27 => 0x00000002
+table_tcam_add_entry lookup_len 0xb set_len_code 0b10111110/31 => 0x00000002
+#380
+table_tcam_add_entry lookup_len 0xc set_len_code 0b101111000/30 => 0x00000003
+table_tcam_add_entry lookup_len 0xd set_len_code 0b101110000/29 => 0x00000003
+table_tcam_add_entry lookup_len 0xe set_len_code 0b101100000/28 => 0x00000003
+table_tcam_add_entry lookup_len 0xf set_len_code 0b101000000/27 => 0x00000003
+table_tcam_add_entry lookup_len 0x10 set_len_code 0b100000000/26 => 0x00000003
+table_tcam_add_entry lookup_len 0x11 set_len_code 0b000000000/24 => 0x00000003
+table_tcam_add_entry lookup_len 0x12 set_len_code 0b101111100/30 => 0x00000003
+#541
+table_tcam_add_entry lookup_len 0x13 set_len_code 0b1000011100/32 => 0x00000004
+table_tcam_add_entry lookup_len 0x14 set_len_code 0b1000011000/30 => 0x00000004
+table_tcam_add_entry lookup_len 0x15 set_len_code 0b1000010000/29 => 0x00000004
+table_tcam_add_entry lookup_len 0x16 set_len_code 0b1000000000/28 => 0x00000004
+table_tcam_add_entry lookup_len 0x17 set_len_code 0b0000000000/23 => 0x00000004
+table_tcam_add_entry lookup_len 0x18 set_len_code 0b1000011101/32 => 0x00000004
+
+
+#IP Protocol
+#11
+table_tcam_add_entry lookup_ip_proto 0x0 set_ip_proto_code 0b1010/32 => 0x00000001
+table_tcam_add_entry lookup_ip_proto 0x1 set_ip_proto_code 0b1000/31 => 0x00000001
+table_tcam_add_entry lookup_ip_proto 0x2 set_ip_proto_code 0b0000/29 => 0x00000001
+table_tcam_add_entry lookup_ip_proto 0x3 set_ip_proto_code 0b1011/32 => 0x00000001
+
+#IP flags
+#1
+table_tcam_add_entry lookup_ip_flags 0x0 set_ip_flags_code 0b0/32 => 0x00000001
+table_tcam_add_entry lookup_ip_flags 0x1 set_ip_flags_code 0b1/32 => 0x00000001
+
+#TCP Src Port
+#2503
+table_tcam_add_entry lookup_tcp_srcport 0x0 set_tcp_srcport_code 0b100111000110/32 => 0x00000001
+table_tcam_add_entry lookup_tcp_srcport 0x1 set_tcp_srcport_code 0b100111000100/31 => 0x00000001
+table_tcam_add_entry lookup_tcp_srcport 0x2 set_tcp_srcport_code 0b100111000000/30 => 0x00000001
+table_tcam_add_entry lookup_tcp_srcport 0x3 set_tcp_srcport_code 0b100110000000/26 => 0x00000001
+table_tcam_add_entry lookup_tcp_srcport 0x4 set_tcp_srcport_code 0b100100000000/25 => 0x00000001
+table_tcam_add_entry lookup_tcp_srcport 0x5 set_tcp_srcport_code 0b100000000000/24 => 0x00000001
+table_tcam_add_entry lookup_tcp_srcport 0x6 set_tcp_srcport_code 0b000000000000/21 => 0x00000001
+table_tcam_add_entry lookup_tcp_srcport 0x7 set_tcp_srcport_code 0b100111000111/32 => 0x00000001
+#5110
+table_tcam_add_entry lookup_tcp_srcport 0x8 set_tcp_srcport_code 0b1001111110100/31 => 0x00000002
+table_tcam_add_entry lookup_tcp_srcport 0x9 set_tcp_srcport_code 0b1001111110000/30 => 0x00000002
+table_tcam_add_entry lookup_tcp_srcport 0xa set_tcp_srcport_code 0b1001111100000/28 => 0x00000002
+table_tcam_add_entry lookup_tcp_srcport 0xb set_tcp_srcport_code 0b1001111000000/27 => 0x00000002
+table_tcam_add_entry lookup_tcp_srcport 0xc set_tcp_srcport_code 0b1001110000000/26 => 0x00000002
+table_tcam_add_entry lookup_tcp_srcport 0xd set_tcp_srcport_code 0b1001100000000/25 => 0x00000002
+table_tcam_add_entry lookup_tcp_srcport 0xe set_tcp_srcport_code 0b1001000000000/24 => 0x00000002
+table_tcam_add_entry lookup_tcp_srcport 0xf set_tcp_srcport_code 0b1000000000000/23 => 0x00000002
+table_tcam_add_entry lookup_tcp_srcport 0x10 set_tcp_srcport_code 0b0000000000000/20 => 0x00000002
+table_tcam_add_entry lookup_tcp_srcport 0x11 set_tcp_srcport_code 0b1001111110110/31 => 0x00000002
+#38144
+table_tcam_add_entry lookup_tcp_srcport 0x12 set_tcp_srcport_code 0b1001010000000000/24 => 0x00000003
+table_tcam_add_entry lookup_tcp_srcport 0x13 set_tcp_srcport_code 0b1001000000000000/22 => 0x00000003
+table_tcam_add_entry lookup_tcp_srcport 0x14 set_tcp_srcport_code 0b1000000000000000/20 => 0x00000003
+table_tcam_add_entry lookup_tcp_srcport 0x15 set_tcp_srcport_code 0b0000000000000000/17 => 0x00000003
+table_tcam_add_entry lookup_tcp_srcport 0x16 set_tcp_srcport_code 0b1001010100000000/24 => 0x00000003
+#49152
+table_tcam_add_entry lookup_tcp_srcport 0x17 set_tcp_srcport_code 0b1000000000000000/18 => 0x00000004
+table_tcam_add_entry lookup_tcp_srcport 0x18 set_tcp_srcport_code 0b1100000000000000/18 => 0x00000004
+#51385
+table_tcam_add_entry lookup_tcp_srcport 0x19 set_tcp_srcport_code 0b1100100010111000/32 => 0x00000005
+table_tcam_add_entry lookup_tcp_srcport 0x1a set_tcp_srcport_code 0b1100100010110000/29 => 0x00000005
+table_tcam_add_entry lookup_tcp_srcport 0x1b set_tcp_srcport_code 0b1100100010100000/28 => 0x00000005
+table_tcam_add_entry lookup_tcp_srcport 0x1c set_tcp_srcport_code 0b1100100010000000/27 => 0x00000005
+table_tcam_add_entry lookup_tcp_srcport 0x1d set_tcp_srcport_code 0b1100100000000000/25 => 0x00000005
+table_tcam_add_entry lookup_tcp_srcport 0x1e set_tcp_srcport_code 0b1100000000000000/21 => 0x00000005
+table_tcam_add_entry lookup_tcp_srcport 0x1f set_tcp_srcport_code 0b1000000000000000/18 => 0x00000005
+table_tcam_add_entry lookup_tcp_srcport 0x20 set_tcp_srcport_code 0b1100100010111001/32 => 0x00000005
+#52420
+table_tcam_add_entry lookup_tcp_srcport 0x21 set_tcp_srcport_code 0b1100110011000000/30 => 0x00000006
+table_tcam_add_entry lookup_tcp_srcport 0x22 set_tcp_srcport_code 0b1100110010000000/26 => 0x00000006
+table_tcam_add_entry lookup_tcp_srcport 0x23 set_tcp_srcport_code 0b1100110000000000/25 => 0x00000006
+table_tcam_add_entry lookup_tcp_srcport 0x24 set_tcp_srcport_code 0b1100100000000000/22 => 0x00000006
+table_tcam_add_entry lookup_tcp_srcport 0x25 set_tcp_srcport_code 0b1100000000000000/21 => 0x00000006
+table_tcam_add_entry lookup_tcp_srcport 0x26 set_tcp_srcport_code 0b1000000000000000/18 => 0x00000006
+table_tcam_add_entry lookup_tcp_srcport 0x27 set_tcp_srcport_code 0b1100110011000100/30 => 0x00000006
+
+#TCP Dst Port
+#261
+table_tcam_add_entry lookup_tcp_dstport 0x0 set_tcp_dstport_code 0b100000100/32 => 0x00000001
+table_tcam_add_entry lookup_tcp_dstport 0x1 set_tcp_dstport_code 0b100000000/30 => 0x00000001
+table_tcam_add_entry lookup_tcp_dstport 0x2 set_tcp_dstport_code 0b000000000/24 => 0x00000001
+table_tcam_add_entry lookup_tcp_dstport 0x3 set_tcp_dstport_code 0b100000101/32 => 0x00000001
+#454
+table_tcam_add_entry lookup_tcp_dstport 0x4 set_tcp_dstport_code 0b111000100/31 => 0x00000002
+table_tcam_add_entry lookup_tcp_dstport 0x5 set_tcp_dstport_code 0b111000000/30 => 0x00000002
+table_tcam_add_entry lookup_tcp_dstport 0x6 set_tcp_dstport_code 0b110000000/26 => 0x00000002
+table_tcam_add_entry lookup_tcp_dstport 0x7 set_tcp_dstport_code 0b100000000/25 => 0x00000002
+table_tcam_add_entry lookup_tcp_dstport 0x8 set_tcp_dstport_code 0b000000000/24 => 0x00000002
+table_tcam_add_entry lookup_tcp_dstport 0x9 set_tcp_dstport_code 0b111000110/31 => 0x00000002
+#718
+table_tcam_add_entry lookup_tcp_dstport 0xa set_tcp_dstport_code 0b1011001100/31 => 0x00000003
+table_tcam_add_entry lookup_tcp_dstport 0xb set_tcp_dstport_code 0b1011001000/30 => 0x00000003
+table_tcam_add_entry lookup_tcp_dstport 0xc set_tcp_dstport_code 0b1011000000/29 => 0x00000003
+table_tcam_add_entry lookup_tcp_dstport 0xd set_tcp_dstport_code 0b1010000000/26 => 0x00000003
+table_tcam_add_entry lookup_tcp_dstport 0xe set_tcp_dstport_code 0b1000000000/25 => 0x00000003
+table_tcam_add_entry lookup_tcp_dstport 0xf set_tcp_dstport_code 0b0000000000/23 => 0x00000003
+table_tcam_add_entry lookup_tcp_dstport 0x10 set_tcp_dstport_code 0b1011001110/31 => 0x00000003
+#729
+table_tcam_add_entry lookup_tcp_dstport 0x11 set_tcp_dstport_code 0b1011011000/32 => 0x00000004
+table_tcam_add_entry lookup_tcp_dstport 0x12 set_tcp_dstport_code 0b1011010000/29 => 0x00000004
+table_tcam_add_entry lookup_tcp_dstport 0x13 set_tcp_dstport_code 0b1011000000/28 => 0x00000004
+table_tcam_add_entry lookup_tcp_dstport 0x14 set_tcp_dstport_code 0b1010000000/26 => 0x00000004
+table_tcam_add_entry lookup_tcp_dstport 0x15 set_tcp_dstport_code 0b1000000000/25 => 0x00000004
+table_tcam_add_entry lookup_tcp_dstport 0x16 set_tcp_dstport_code 0b1011011001/32 => 0x00000004
+#2503
+table_tcam_add_entry lookup_tcp_dstport 0x17 set_tcp_dstport_code 0b100111000110/32 => 0x00000005
+table_tcam_add_entry lookup_tcp_dstport 0x18 set_tcp_dstport_code 0b100111000100/31 => 0x00000005
+table_tcam_add_entry lookup_tcp_dstport 0x19 set_tcp_dstport_code 0b100111000000/30 => 0x00000005
+table_tcam_add_entry lookup_tcp_dstport 0x1a set_tcp_dstport_code 0b100110000000/26 => 0x00000005
+table_tcam_add_entry lookup_tcp_dstport 0x1b set_tcp_dstport_code 0b100100000000/25 => 0x00000005
+table_tcam_add_entry lookup_tcp_dstport 0x1c set_tcp_dstport_code 0b100000000000/24 => 0x00000005
+table_tcam_add_entry lookup_tcp_dstport 0x1d set_tcp_dstport_code 0b000000000000/21 => 0x00000005
+table_tcam_add_entry lookup_tcp_dstport 0x1e set_tcp_dstport_code 0b100111000111/32 => 0x00000005
+#5110
+table_tcam_add_entry lookup_tcp_dstport 0x1f set_tcp_dstport_code 0b1001111110100/31 => 0x00000006
+table_tcam_add_entry lookup_tcp_dstport 0x20 set_tcp_dstport_code 0b1001111110000/30 => 0x00000006
+table_tcam_add_entry lookup_tcp_dstport 0x21 set_tcp_dstport_code 0b1001111100000/28 => 0x00000006
+table_tcam_add_entry lookup_tcp_dstport 0x22 set_tcp_dstport_code 0b1001111000000/27 => 0x00000006
+table_tcam_add_entry lookup_tcp_dstport 0x23 set_tcp_dstport_code 0b1001110000000/26 => 0x00000006
+table_tcam_add_entry lookup_tcp_dstport 0x24 set_tcp_dstport_code 0b1001100000000/25 => 0x00000006
+table_tcam_add_entry lookup_tcp_dstport 0x25 set_tcp_dstport_code 0b1001000000000/24 => 0x00000006
+table_tcam_add_entry lookup_tcp_dstport 0x26 set_tcp_dstport_code 0b1000000000000/23 => 0x00000006
+table_tcam_add_entry lookup_tcp_dstport 0x27 set_tcp_dstport_code 0b0000000000000/20 => 0x00000006
+table_tcam_add_entry lookup_tcp_dstport 0x28 set_tcp_dstport_code 0b1001111110110/31 => 0x00000006
+#16441
+table_tcam_add_entry lookup_tcp_dstport 0x29 set_tcp_dstport_code 0b100000000111000/32 => 0x00000007
+table_tcam_add_entry lookup_tcp_dstport 0x2a set_tcp_dstport_code 0b100000000110000/29 => 0x00000007
+table_tcam_add_entry lookup_tcp_dstport 0x2b set_tcp_dstport_code 0b100000000100000/28 => 0x00000007
+table_tcam_add_entry lookup_tcp_dstport 0x2c set_tcp_dstport_code 0b100000000000000/27 => 0x00000007
+table_tcam_add_entry lookup_tcp_dstport 0x2d set_tcp_dstport_code 0b000000000000000/18 => 0x00000007
+table_tcam_add_entry lookup_tcp_dstport 0x2e set_tcp_dstport_code 0b100000000111001/32 => 0x00000007
+
+#code to decision
+table_cam_add_entry lookup_code set_output_port 0b0000000000000010001100000 => 0x00000001
+table_cam_add_entry lookup_code set_output_port 0b0000000000000010010000000 => 0x00000100
+table_cam_add_entry lookup_code set_output_port 0b0000000000000010010100000 => 0x00010000
+
+#Else go to port 0
+table_cam_add_entry lookup_code set_output_port 0b00000000000000000 => 0b01000000
+
