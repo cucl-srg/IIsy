@@ -1,4 +1,4 @@
-IIsy - In Network Inference Made Easy
+# IIsy - In Network Inference Made Easy
 
 # Introduction
 
